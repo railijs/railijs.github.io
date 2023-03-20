@@ -1,0 +1,53 @@
+header {
+background-color: black;
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+z-index: 2;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover{
+    color: antiquewhite;
+}
+
+main {
+    margin-top: 80px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+li{
+    list-style: none;
+    transition: transform 0.3s;
+}
+li:hover{
+    transform: translateX(5px);
+}
+
+.cube {
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    position: relative;
+}
+
+.inner-cube{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
