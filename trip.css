@@ -16,12 +16,20 @@
   header {
     background-color: rgb(42, 187, 254);
     height: 60px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
   }
   
   footer {
     background-color: rgb(42, 81, 254);
     width: 100vw;
     height: 60px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
   }
   
   main {
@@ -30,7 +38,7 @@
   }
   
   article {
-    /* Te jāpapildina CSS */
+    position: relative;
     margin-bottom: 200px;
     margin-top: 100px;
   }
@@ -42,9 +50,28 @@
   
   img {
     width: 400px;
+    
   }
   
   p {
     font-size: 2rem;
+  }
+
+  .indonesia {
+    position: absolute;
+    top: 120px;
+    right: 300px;
+  }
+
+  .australia {
+    position: absolute;
+    top: 80px;
+    right: 300px;
+  }
+
+  .liepaja {
+    position: absolute;
+    top: 80px;
+    right: 300px;
   }
   
