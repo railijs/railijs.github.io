@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url("https://hips.hearstapps.com/amv-prod-gp.s3.amazonaws.com/gearpatrol/wp-content/uploads/2020/04/Weed-Terms-Gear-Patrol-Lead-Full.jpg");
+      }
+
+      .smuka-poga {
+        cursor: pointer;
+        border: none;
+        background: none;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>To Do List</h1>
+
+    <form onsubmit="handleSubmit ()">
+      <label for="task">ievadi uzdevumu:</label>
+      <input id="task" />
+      <button>add</button>
+    </form>
+    <ul id="saraksts"></ul>
+    <script>
+      const uzdevumi = [];
+
+      function handleSubmit() {
+        event.preventDefault(); //neparlade lapu
+        // ieliek uzd mainigaja
+        const task = document.getElementById("task").value;
+        uzdevumi.push(task);
+        document.getElementById("task").value = "";
+        console.log(uzdevumi);
+        displayItems();
+      }
+
+      function displayItems() {
+        const list = document.getElementById("saraksts");
+        list.innerHTML = "";
+        uzdevumi.forEach((singleTask, id) => {
+          const newListItem = document.createElement("li"); // izveidot jaunu li elementu
+          const poga = document.createElement("button");
+          poga.classList.add("smuka-poga");
+          poga.onclick = () => deleteItem(id);
+          poga.textContent = "❌";
+
+          newListItem.textContent = singleTask;
+          newListItem.appendChild(poga);
+          list.appendChild(newListItem);
+        });
+      }
+
+      function deleteItem(id) {
+        uzdevumi.splice(id, 1);
+        console.log("poga nospiesta");
+        displayItems();
+      }
+
+      // katrm li item pievieno pogu
+    </script>
+  </body>
+</html>
