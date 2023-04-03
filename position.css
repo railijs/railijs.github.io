@@ -3,14 +3,21 @@ background-color: black;
 position: fixed;
 top: 0;
 left: 0;
-width: 99vw;
+width: 98vw;
 z-index: 2;
 border-style: solid;
 border-radius: 5px;
-margin: 5px;
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 5px;
 }
 
 h1 {
+    text-align: center;
+}
+
+h2{
     text-align: center;
 }
 
@@ -19,13 +26,13 @@ h3 {
 }
 
 a{
-    color: white;
+    color: purple;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover{
-    color: antiquewhite;
+    color: blueviolet;
 }
 
 main {
@@ -107,11 +114,7 @@ li:hover{
     }
 }
 
-img {
-    width: 350px;
-    height: 450px;
-    
-}
+
 
 #sakums{
 position: relative;
@@ -119,6 +122,21 @@ height: 500px;
 }
 
 .wizz{
-    position:absolute;
-    right: 550px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    height: 400px;
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
+
+.kebab{
+    height: 300px;
+    width: 450px;
+    border-radius: 10px;
+}
+
+.wizz:hover{
+    transform: scale(1.05);
 }
