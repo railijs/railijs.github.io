@@ -58,6 +58,8 @@ li:hover{
     display: none;
     transition: transform 0.3s;
     transform-origin: left;
+      max-width: 75px;
+    max-height: 75px;
 }
 
 
@@ -71,7 +73,7 @@ li:hover{
     display: none;
 }
 
-@media (max-width: 200px) {
+@media (max-width: 400px) {
     .burger {
         display: block;
     }
@@ -102,8 +104,8 @@ li:hover{
         position: absolute;
         top: 0;
         left: 0;
-        width: 40px;
-        height: 40px;
+        width: 75px;
+        height: 75px;
         opacity: 0;
         cursor: pointer;
         z-index: 2;
